@@ -20,9 +20,9 @@ export function Header() {
         <div className="text-sm max-[500px]:text-justify sm:text-base">
           <p className="my-8">
             Somos uma plataforma que permite a criação de <strong>experimentos interativos</strong>{' '}
-            para aulas de ciências em
-            <strong> medicina veterinária</strong>. Através dela, professores podem criar
-            experimentos e alunos podem interagir com eles em tempo real.
+            para aulas de fisiologia da graduação em
+            <strong> medicina veterinária</strong>. Através do nosso sistema, professores podem
+            criar experimentos com um pin único de acesso e alunos podem interagir em tempo real.
           </p>
 
           <p>Escolha seu experimento e teste seus conhecimentos!</p>

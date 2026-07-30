@@ -1,5 +1,5 @@
+import { ExperimentList, Header } from '@/features/home';
 import { Suspense } from 'react';
-import { ExperimentList, Header } from '../features/home';
 
 export default function Home() {
   return (

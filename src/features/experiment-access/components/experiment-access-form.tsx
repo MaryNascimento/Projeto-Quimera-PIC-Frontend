@@ -63,6 +63,7 @@ export function ExperimentAccessForm() {
           </Button>
         </Field>
       </FieldGroup>
+      {state.success && <div>{state.message}</div>}
     </form>
   );
 }

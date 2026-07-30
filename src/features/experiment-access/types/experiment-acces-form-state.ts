@@ -5,8 +5,8 @@ export type ExperimentAccessFormState = {
     student?: string[];
     pin?: string[];
   };
-  inputs: {
-    student: string;
-    pin: string;
+  inputs?: {
+    student?: string;
+    pin?: string;
   };
 };

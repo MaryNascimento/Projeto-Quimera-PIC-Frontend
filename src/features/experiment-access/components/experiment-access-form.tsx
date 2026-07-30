@@ -11,12 +11,6 @@ import { formatErrorMessages } from '../utils/format-error-messages';
 
 const ExperimentAccessInitialFormState: ExperimentAccessFormState = {
   success: false,
-  field_errors: undefined,
-  message: undefined,
-  inputs: {
-    student: '',
-    pin: '',
-  },
 };
 
 export function ExperimentAccessForm() {

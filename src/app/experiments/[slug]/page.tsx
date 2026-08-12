@@ -1,4 +1,4 @@
-import { ExperimentAccessForm } from '@/features/experiment-access/components/experiment-access-form';
+import { ExperimentAccessCard } from '@/features/experiment-access/components/experiment-access-card';
 import { Suspense } from 'react';
 
 export const metadata = {
@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function ExperimentForm() {
   return (
-    <main>
+    <main className="flex min-h-screen items-center justify-center">
       <Suspense fallback="Loading experiment form...">
-        <ExperimentAccessForm />
+        <ExperimentAccessCard />
       </Suspense>
     </main>
   );

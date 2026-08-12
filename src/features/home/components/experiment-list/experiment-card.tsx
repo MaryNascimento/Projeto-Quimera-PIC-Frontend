@@ -22,7 +22,7 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
   return (
     <Card className="w-full max-w-md px-4 py-8">
       <CardHeader className="text-center">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-gray-300">
+        <div className="border-border mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border">
           <Icon className="h-8 w-8" strokeWidth={1.4} />
         </div>
 
@@ -35,8 +35,8 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
       <CardFooter>
         <CardAction className="mx-auto">
           <Button
-            variant="secondary"
-            className="cursor-pointer bg-green-500 px-4 text-white hover:bg-green-400/90"
+            variant="default"
+            className="cursor-pointer px-4"
             onClick={() => {
               window.open(`experiments/${experiment.slug}`, '_blank');
             }}

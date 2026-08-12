@@ -8,6 +8,8 @@ import { ExperimentAccessAction } from '../actions/experiment-access-action';
 import { useParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { formatErrorMessages } from '../utils/format-error-messages';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AlertCircleIcon } from 'lucide-react';
 
 const ExperimentAccessInitialFormState: ExperimentAccessFormState = {
   success: false,
@@ -26,6 +28,14 @@ export function ExperimentAccessForm() {
 
   return (
     <form action={formAction}>
+      {!state.success && state.message && (
+        <Alert variant="destructive" className="mb-4">
+          <AlertCircleIcon className="mr-2 h-4 w-4" />
+
+          <AlertDescription>{state.message}</AlertDescription>
+        </Alert>
+      )}
+
       <FieldGroup>
         <Field data-invalid={!!state.field_errors?.student}>
           <FieldLabel htmlFor="student">Nome do Aluno</FieldLabel>
@@ -52,12 +62,11 @@ export function ExperimentAccessForm() {
           <FieldError errors={formatErrorMessages(state?.field_errors?.pin)} />
         </Field>
         <Field>
-          <Button type="submit" disabled={isPending}>
+          <Button type="submit" disabled={isPending} className="cursor-pointer">
             Entrar
           </Button>
         </Field>
       </FieldGroup>
-      {state.success && <div>{state.message}</div>}
     </form>
   );
 }

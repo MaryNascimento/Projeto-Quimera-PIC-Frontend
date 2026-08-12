@@ -8,14 +8,10 @@ const poppins = Poppins({
   variable: '--font-poppins',
 });
 
-export const metadata = {
-  title: 'Quimera',
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="flex min-h-full flex-col text-gray-700 antialiased">{children}</body>
+    <html lang="pt-BR" className={poppins.variable}>
+      <body>{children}</body>
     </html>
   );
 }

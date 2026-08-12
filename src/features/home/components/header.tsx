@@ -14,7 +14,7 @@ export function Header() {
       <section className="w-full max-w-3xl text-center">
         <h1 className="text-lg font-light sm:text-xl">
           Seja bem-vindo(a) ao <br />
-          <strong className="text-5xl font-semibold text-green-500 sm:text-6xl">QUIMERA</strong>
+          <strong className="text-primary text-5xl font-semibold sm:text-6xl">QUIMERA</strong>
         </h1>
 
         <div className="text-sm max-[500px]:text-justify sm:text-base">

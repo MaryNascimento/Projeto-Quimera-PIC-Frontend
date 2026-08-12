@@ -3,7 +3,7 @@
 import z from 'zod';
 import { ExperimentAccessSchema } from '../schemas/experiment-access-schema';
 import { ExperimentAccessFormState } from '../types/experiment-acces-form-state';
-// import { redirect } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 export async function ExperimentAccessAction(
   slug: string,
@@ -31,6 +31,7 @@ export async function ExperimentAccessAction(
 
   try {
     await new Promise((resolve) => setTimeout(resolve, 1500));
+
     if (validatedData.data.pin === '000000') {
       throw new Error('API Error: Este PIN foi bloqueado pelo sistema externo.');
     }
@@ -43,12 +44,5 @@ export async function ExperimentAccessAction(
     };
   }
 
-  console.log('Form submitted successfully:', validatedData.data);
-
-  return {
-    success: true,
-    field_errors: undefined,
-    message: `Acesso ao experimento concedido com sucesso!Slug do experimento: ${slug}, Nome do aluno: ${validatedData.data.student}, PIN: ${validatedData.data.pin}`,
-    inputs: validatedData.data,
-  };
+  redirect(`/experiments/${slug}/${validatedData.data.pin}`);
 }

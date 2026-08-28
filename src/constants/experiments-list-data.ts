@@ -1,12 +1,12 @@
-import { GlassWater, FlaskConical } from 'lucide-react';
-import { ExperimentsListTypes } from '../types/experiments-list-types';
+import { ExperimentTypes } from '@/types/experiment-types';
+import { FlaskConical, GlassWater } from 'lucide-react';
 
-export const EXPERIMENT_LIST_DATA: ExperimentsListTypes[] = [
+export const EXPERIMENTS_LIST_DATA: ExperimentTypes[] = [
   {
     slug: 'body-water-loss',
     title: 'Queda de Água Corporal',
     description:
-      'Teste seus conhecimentos nesse caso clínico que simula os efeitos da queda de água no organismo dos animais.',
+      'Explore como a perda de água afeta o organismo dos animais e entenda os mecanismos fisiológicos envolvidos na manutenção do equilíbrio hídrico.',
     Icon: GlassWater,
   },
   {

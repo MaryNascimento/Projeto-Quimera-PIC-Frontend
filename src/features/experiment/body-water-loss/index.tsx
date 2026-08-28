@@ -4,6 +4,7 @@ import { BODY_WATER_LOSS_DEFAULT_DATA } from './constants/body-water-loss-defaul
 
 export function BodyWaterLoss() {
   const data = BODY_WATER_LOSS_DEFAULT_DATA;
+
   return (
     <>
       <ExperimentHeader header={data.header} />

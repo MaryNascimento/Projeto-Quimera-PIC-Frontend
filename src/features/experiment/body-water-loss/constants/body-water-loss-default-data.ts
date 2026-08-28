@@ -1,12 +1,11 @@
+import { GetExperiment } from '@/utils/get-experiment';
 import { ExperimentDefaultDataTypes } from '../../shared/types/experiment-default-data-types';
 import { MakdownReadContent } from '../../shared/utils/markdown-read-content';
 import DogIlustration from '../assets/DogIlustration.png';
 
 export const BODY_WATER_LOSS_DEFAULT_DATA: ExperimentDefaultDataTypes = {
   header: {
-    title: 'Queda de Água Corporal',
-    description:
-      'Explore como a perda de água afeta o organismo dos animais e entenda os mecanismos fisiológicos envolvidos na manutenção do equilíbrio hídrico.',
+    data: GetExperiment('body-water-loss'),
     imageSrc: DogIlustration,
     imageAlt: 'Imagem de um cão da raça golden tomando água.',
   },

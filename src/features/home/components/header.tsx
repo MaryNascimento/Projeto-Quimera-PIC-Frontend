@@ -8,7 +8,7 @@ export function Header() {
       <Image
         src={HomeImage}
         alt="Gato e cachorro juntos"
-        className="w-full max-w-56 sm:max-w-80"
+        className="w-full max-w-80"
         priority={true}
       />
       <section className="w-full max-w-3xl text-center">

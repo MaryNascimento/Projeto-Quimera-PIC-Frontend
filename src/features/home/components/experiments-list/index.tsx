@@ -1,13 +1,13 @@
-import { getExperiments } from '../../services/get-experiments';
+import { EXPERIMENT_LIST_DATA } from '../../constants/experiment-list-data';
 import { ExperimentCard } from './experiment-card';
 
-export async function ExperimentList() {
-  const experiments = await getExperiments();
+export function ExperimentsList() {
+  const experiments = EXPERIMENT_LIST_DATA;
 
   return (
     <section className="my-16 flex flex-col items-center justify-center gap-8 md:flex-row">
       {experiments.map((experiment) => (
-        <ExperimentCard key={experiment.id} experiment={experiment} />
+        <ExperimentCard key={experiment.slug} experiment={experiment} />
       ))}
     </section>
   );

@@ -3,7 +3,7 @@ import { Footer } from '@/components/layout/footer';
 
 export default function DefaultLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-full flex-col antialiased">
+    <div className="flex min-h-screen flex-col antialiased">
       <NavBar />
       <main className="mx-5 flex-1">{children}</main>
       <Footer />
